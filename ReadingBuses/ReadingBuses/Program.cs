@@ -96,15 +96,15 @@ namespace ReadingBuses
 				{
 					Service = Call.Element("Service").Value.ToString(),
 					Destination = Call.Element("Destination").Value.ToString(),
-					SchArrival = Call.Element("ScheduledArrival").Value.ToString()
+					SchArrival = DateTime.ParseExact(Call.Element("ScheduledArrival").Value.ToString(), "yyyy-MM-ddTHH:mm:ss+ff:ff", System.Globalization.CultureInfo.InvariantCulture)
 
 				});
 
 				foreach (XElement Expct in Call.Descendants("MonitoredCall"))
-					Arrivals[Arrivals.Count - 1].ExptArrival = Expct.Element("ExpectedArrival").Value.ToString();
+					Arrivals[Arrivals.Count - 1].ExptArrival = DateTime.ParseExact(Expct.Element("ExpectedArrival").Value.ToString(), "yyyy-MM-ddTHH:mm:ss+ff:ff", System.Globalization.CultureInfo.InvariantCulture);
 			}
 
-			foreach (BLocation Time in Arrivals)
+			foreach (BLocation Time in Arrivals)	//If Expt Arrival is 0001, then a time has not yet been published.
 			{
 				Console.WriteLine(Time.Service + "   " + Time.Destination + "		" + Time.SchArrival + "		" + Time.ExptArrival);
 			}

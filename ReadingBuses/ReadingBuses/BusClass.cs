@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace ReadingBuses
 {
@@ -54,7 +55,7 @@ namespace ReadingBuses
 	{
 		public string Service;
 		public string Destination;
-		public string SchArrival;
-		public string ExptArrival;
+		public DateTime SchArrival;
+		public DateTime ExptArrival;
 	}
 }
