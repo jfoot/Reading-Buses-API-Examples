@@ -21,7 +21,7 @@ namespace ReadingBuses
 						Boperator = "Reading Buses";
 						break;
 					case "CTNY":
-						Boperator = "CTNY";
+						Boperator = "Courtney Buses";
 						break;
 					case "TH":
 						Boperator = "Thames Travel";
