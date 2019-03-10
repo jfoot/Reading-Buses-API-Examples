@@ -12,6 +12,9 @@ namespace ReadingBusesNewAPI
         /// This program like it's predecessor gets a list of bus services operating in Reading
         /// and then lets you select a stop and monitor the live arrival times at that stop.
         /// This program is however using the new and improved Reading Buses Open Data API!
+        /// 
+        /// You will need to install "Newtonsoft" from the Nugget Store for this program to work:
+        ///     PM> Install-Package Newtonsoft.Json
         /// </summary>
 
         private const string APIKEY = "[INSERT-API-KEY-HERE]"; //Get your own from http://rtl2.ods-live.co.uk/cms/apiservice
