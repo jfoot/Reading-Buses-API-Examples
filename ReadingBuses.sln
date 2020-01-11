@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingBuses", "ReadingBuses\ReadingBuses.csproj", "{3A472625-4770-4483-B40D-188299C03456}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingBusesNewAPI", "ReadingBusesNewAPI\ReadingBusesNewAPI.csproj", "{921B25DF-A383-4C05-95A9-A5D7FFB98906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingBusesNewAPIWithLibrary", "ReadingBusesNewAPIWithLibrary\ReadingBusesNewAPIWithLibrary.csproj", "{42611291-2B66-4E2C-AE2D-9994BE036E69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{921B25DF-A383-4C05-95A9-A5D7FFB98906}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{921B25DF-A383-4C05-95A9-A5D7FFB98906}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{921B25DF-A383-4C05-95A9-A5D7FFB98906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42611291-2B66-4E2C-AE2D-9994BE036E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42611291-2B66-4E2C-AE2D-9994BE036E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42611291-2B66-4E2C-AE2D-9994BE036E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42611291-2B66-4E2C-AE2D-9994BE036E69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
