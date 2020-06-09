@@ -3,10 +3,10 @@ The latest program added to these examples uses my new Reading Buses API Library
 https://www.nuget.org/packages/ReadingBusesAPI/
 
 The Library provides access to the following APIs: 
-List of Bus Stops, Live Vehicle Positions, Stop Predictions, List of Services and Line Patterns
+List of Bus Stops, Live Vehicle Positions, Stop Predictions, List of Services, Line Patterns, Timetabled Journeys, Tracking History and the Vehicle Position History API.
 
 # Reading Buses API
-Since I originally realised this program there has been the launch of Reading Buses very own API. This API is significantly better than the old Reading Open Data API. You can get your own account from here:
+Since I originally released this program there has been the launch of Reading Buses very own API. This API is significantly better than the old Reading Open Data API. You can get your own account from here:
 
 http://rtl2.ods-live.co.uk/cms/apiservice
 

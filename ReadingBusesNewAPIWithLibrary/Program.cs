@@ -1,15 +1,17 @@
 ﻿using ReadingBusesAPI;
 using System;
 using System.Globalization;
-using System.Linq;
 using System.Threading.Tasks;
-using ReadingBusesAPI.Bus_Service;
-using ReadingBusesAPI.Bus_Stops;
-using ReadingBusesAPI.Journey_Details;
-using ReadingBusesAPI.Shared;
+using ReadingBusesAPI.BusServices;
+using ReadingBusesAPI.BusStops;
+using ReadingBusesAPI.JourneyDetails;
+using ReadingBusesAPI.Common;
 
 namespace ReadingBusesNewAPIWithLibrary
 {
+	/// <summary>
+	/// A simple program which lets you select a bus service, then a bus stop and get live data from that bus stop.
+	/// </summary>
     class Program
     {
         static async Task Main(string[] args) {
@@ -17,14 +19,14 @@ namespace ReadingBusesNewAPIWithLibrary
             ReadingBuses.SetCache(true);
             //Initializes the controller, enter in your Reading Buses API - Get your own from http://rtl2.ods-live.co.uk/cms/apiservice
             //Once Instantiated you can also use, "ReadingBuses.GetInstance();" to get future instances.
-            ReadingBuses controller =  await ReadingBuses.Initialise("");
+            ReadingBuses controller =  await ReadingBuses.Initialise("CkrJmB7z6m");
 
-	        const Operators operators = Operators.ReadingBuses; //Used to store which operator to get data from.
+	        const Company busCompany = Company.ReadingBuses; //Used to store which operator to get data from.
 			string serviceOption;   //Used to store the user choice for which service to view
             string stopOption;      //Used to store the user choice for which bus stop to view.
 
             //Prints off all services running in Reading.
-            foreach (var busService in controller.GetServices().Where(x => x.OperatorCode == operators))
+            foreach (var busService in controller.GetServices(busCompany))
 	            Console.WriteLine(busService.ServiceId + " " + busService.BrandName);
 			
 	            
@@ -33,11 +35,11 @@ namespace ReadingBusesNewAPIWithLibrary
             {
                 Console.WriteLine("\nWhich bus service do you want to review? Please enter it's service number.");
                 serviceOption = Console.ReadLine();
-            } while (!controller.IsService(serviceOption, operators)); //Checks the value entered is a ReadingBuses Service
+            } while (!controller.IsService(serviceOption, busCompany)); //Checks the value entered is a ReadingBuses Service
             Console.Clear();
 
             //Gets that service and stores it in a BusServices Object.
-            BusService service = controller.GetService(serviceOption, operators);
+            BusService service = controller.GetService(serviceOption, busCompany);
 
             ////Prints off the name and code of every bus stop visited by that service.
             foreach (var location in await service.GetLocations())
