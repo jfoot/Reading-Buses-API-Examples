@@ -19,7 +19,7 @@ namespace ReadingBusesNewAPIWithLibrary
             ReadingBuses.SetCache(true);
             //Initializes the controller, enter in your Reading Buses API - Get your own from http://rtl2.ods-live.co.uk/cms/apiservice
             //Once Instantiated you can also use, "ReadingBuses.GetInstance();" to get future instances.
-            ReadingBuses controller =  await ReadingBuses.Initialise("CkrJmB7z6m");
+            ReadingBuses controller =  await ReadingBuses.Initialise("[API KEY]");
 
 	        const Company busCompany = Company.ReadingBuses; //Used to store which operator to get data from.
 			string serviceOption;   //Used to store the user choice for which service to view
