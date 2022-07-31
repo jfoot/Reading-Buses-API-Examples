@@ -3,18 +3,9 @@ The latest program added to these examples uses my new Reading Buses API Library
 https://www.nuget.org/packages/ReadingBusesAPI/
 
 The Library provides access to the following APIs: 
-List of Bus Stops, Live Vehicle Positions, Stop Predictions, List of Services, Line Patterns, Timetabled Journeys, Tracking History and the Vehicle Position History API.
+The library supports the List of Bus Stops, Live Vehicle Positions, Live Journey Details, Stop Predictions, List of Lines, Line Patterns, Timetabled Journeys, Tracking History and the Vehicle Position History API.
 
-# Reading Buses API
-Since I originally released this program there has been the launch of Reading Buses very own API. This API is significantly better than the old Reading Open Data API. You can get your own account from here:
+The example program shows selecting a service and then selecting a stop along this services route to get live departure information about this service at its stop.
 
-http://rtl2.ods-live.co.uk/cms/apiservice
-
-This program shows you how to manually access and use the API directly in C#, it allows you to have more control over the data but is more complicated.
-
-# Reading Open Data API (Old Method)
-A small little program testing out the Reading open data API to track the bus times in Reading. To use the code, you will first have to create your own Reading Open Data account at the following website:
-
-http://opendata.reading-travelinfo.co.uk
-
-Once you have created your own account, amend the API key to your own personal API key. This program makes uses of the "Bus Services", "Bus Arrival / Departures" and "Bus Routes" API specifically so ensure that you have subscribed to them. As per the license agreement set, you are free to use the code as you wish so long as any program using this code is under the same license and that your source code is also public.   
+# Legacy 
+The old Reading Buses API (http://rtl2.ods-live.co.uk/cms/apiservice) has been switched off, these examples have been removed. Likewsie the Reading Open Data API (http://opendata.reading-travelinfo.co.uk) seems to have also stopped working sometime 2022. As such, this example has also been removed from the repository.
